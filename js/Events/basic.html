@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="coffe" src="coffe.png" alt="photoshop">
+            </li>
+            <li>
+                <img width="200px" id ="thanks" src="thank.png" alt="thanks">
+            </li>
+            <li>
+                <a style="color:aliceblue;" href="https://google.com" id ="google">Google</a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementById('thanks').onclick=function(){
+    //     alert("Thank YOU")
+    // }
+
+    // attachEvent()
+    // jQuery - on Event
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey,ShiftKey,keyCode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('clicked on the ul')
+    // },false)
+    // document.getElementById('thanks').addEventListener('click',function(e){
+    //     console.log("Thanks")
+    //     e.stopPropagation()
+    // },false)
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     console.log("google clicked");
+        
+    // })
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        let remove_it=e.target.parentNode
+        remove_it.remove()
+        // remove_it.parentNode.removeChild(remove_it)
+    })
+</script>
+</html>
